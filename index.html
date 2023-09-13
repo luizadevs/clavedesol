@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clave de Sol</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="clave.ico" type="image/x-icon">
+</head>
+<body>
+    <img id="fundo" src="imagens/bluesky.png">
+    <img id="pauta" src="imagens/clave.png">
+    <div class="escala">
+        <button id="nota0" class="nota"><strong>DÓ</strong></button>
+        <button id="nota1" class="nota"><strong>RÉ</strong></button>
+        <button id="nota2" class="nota"><strong>MI</strong></button>
+        <button id="nota3" class="nota"><strong>FÁ</strong></button>
+        <button id="nota4" class="nota"><strong>SOL</strong></button>
+        <button id="nota5" class="nota"><strong>LÁ</strong></button>
+        <button id="nota6" class="nota"><strong>SI</strong></button>
+        <button id="nota7" class="nota"><strong>Dó</strong></button>
+    </div>
+    <div class="notas">
+        <div id="notaDo"></div>
+        <div id="notaRe"></div>
+        <div id="notaMi"></div>
+        <div id="notaFa"></div>
+        <div id="notaSol"></div>
+        <div id="notaLa"></div>
+        <div id="notaSi"></div>
+        <div id="notaDoo"></div>
+    </div>
+    <div class="audio">
+        <audio id="audio0" src="sons/C_Piano.wav"></audio>
+        <audio id="audio1" src="sons/D_Piano.wav"></audio>
+        <audio id="audio2" src="sons/E_Piano.wav"></audio>
+        <audio id="audio3" src="sons/F_Piano.wav"></audio>
+        <audio id="audio4" src="sons/G_Piano.wav"></audio>
+        <audio id="audio5" src="sons/A_Piano.wav"></audio>
+        <audio id="audio6" src="sons/B_Piano.wav"></audio>
+        <audio id="audio7" src="sons/C2_Piano.wav"></audio>
+        <audio id="audioErro" src="sons/notaErro.wav"></audio>
+    </div>    
+    <img id="fundoErro" src="imagens/tela.png">
+    <script src="notas.js"></script>
+    <script src="notas2.js"></script>
+</body>
+</html>
