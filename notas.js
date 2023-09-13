@@ -70,7 +70,6 @@ function moverAnotaDo() {
     var notaElement = document.getElementById("notaDo");
     notaElement.style.display = "block";
     notaElement.style.animation = "moveLeft 8s ease-in-out infinite";
-    notaElement.style.transition = "opacity 0.5s ease";
     nota = 1;
     setTimeout(function () {
         notaElement.style.display = "none"; // Ocultar a nota após 8 segundos
