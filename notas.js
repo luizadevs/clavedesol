@@ -98,7 +98,9 @@ botaoDo.addEventListener("click", function () {
         botaoDo.disabled = true;
     }else {
         audioErro.play();
-        pontos--
+        if (pontos > 0) {
+            pontos--;
+        }
     }
 
     pontuacaoElement.textContent = "Pontuação: " + pontos;
@@ -125,7 +127,9 @@ botaoRe.addEventListener("click", function () {
         botaoRe.disabled = true;
     } else {
         audioErro.play();
-        pontos--
+        if (pontos > 0) {
+            pontos--;
+        }
     }
 
     pontuacaoElement.textContent = "Pontuação: " + pontos;
@@ -152,7 +156,9 @@ botaoMi.addEventListener("click", function () {
         botaoMi.disabled = true;
     } else {
         audioErro.play();
-        pontos--
+        if (pontos > 0) {
+            pontos--;
+        }
     }
     
     pontuacaoElement.textContent = "Pontuação: " + pontos;
@@ -179,7 +185,9 @@ botaoFa.addEventListener("click", function () {
         botaoFa.disabled = true;
     } else {
         audioErro.play();
-        pontos--
+        if (pontos > 0) {
+            pontos--;
+        }
     }
 
     pontuacaoElement.textContent = "Pontuação: " + pontos;
@@ -206,7 +214,9 @@ botaoSol.addEventListener("click", function () {
         botaoSol.disabled = true;
     } else {
         audioErro.play();
-        pontos--
+        if (pontos > 0) {
+            pontos--;
+        }
     }
 
     pontuacaoElement.textContent = "Pontuação: " + pontos;
@@ -233,7 +243,9 @@ botaoLa.addEventListener("click", function () {
         botaoLa.disabled = true;
     } else {
         audioErro.play();
-        pontos--
+        if (pontos > 0) {
+            pontos--;
+        }
     }
 
     pontuacaoElement.textContent = "Pontuação: " + pontos;
@@ -260,7 +272,9 @@ botaoSi.addEventListener("click", function () {
         botaoSi.disabled = true;
     } else {
         audioErro.play();
-        pontos--
+        if (pontos > 0) {
+            pontos--;
+        }
     }
 
     pontuacaoElement.textContent = "Pontuação: " + pontos;
@@ -287,7 +301,9 @@ botaoDoo.addEventListener("click", function () {
         botaoDoo.disabled = true;
     } else {
         audioErro.play();
-        pontos--
+        if (pontos > 0) {
+            pontos--;
+        }
     }
 
     pontuacaoElement.textContent = "Pontuação: " + pontos;
