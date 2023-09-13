@@ -7,9 +7,11 @@ var botaoLa = document.getElementById("nota5");
 var botaoSi = document.getElementById("nota6");
 var botaoDoo = document.getElementById("nota7");
 var audioErro = document.getElementById("audioErro");
+var pontuacaoElement = document.getElementById("pontuacao");
 
 // Variável para armazenar a nota atual
 var nota = 0;
+var pontos = 0;
 
 // Função para gerar um número aleatório de 1 a 8
 function gerarNumeroAleatorio() {
@@ -59,6 +61,15 @@ function tocarProximaNota() {
             moverAnotaDoo();
             break;
     }
+
+    botaoDo.disabled = false;
+    botaoRe.disabled = false;
+    botaoMi.disabled = false;
+    botaoFa.disabled = false;
+    botaoSol.disabled = false;
+    botaoLa.disabled = false;
+    botaoSi.disabled = false;
+    botaoDoo.disabled = false;
 }
 
 
@@ -78,12 +89,19 @@ function moverAnotaDo() {
 }
 
 botaoDo.addEventListener("click", function () {
-    if (nota === 1) {
-        var audioDo = document.getElementById("audio0");
-        audioDo.play();
-    } else {
+    if (nota === 1 && !botaoDo.disabled) { // Verifica se a nota é igual a 8 e o botão não está desabilitado
+        var audioDoo = document.getElementById("audio7");
+        audioDoo.play();
+        pontos++;
+
+        // Desabilita o botão após o primeiro clique
+        botaoDo.disabled = true;
+    }else {
         audioErro.play();
+        pontos--
     }
+
+    pontuacaoElement.textContent = "Pontuação: " + pontos;
 });
 
 // Função para mover a nota RE
@@ -99,12 +117,18 @@ function moverAnotaRe() {
 }
 
 botaoRe.addEventListener("click", function () {
-    if (nota === 2) {
+    if (nota === 2 && !botaoRe.disabled) {
         var audioRe = document.getElementById("audio1");
         audioRe.play();
+        pontos++
+
+        botaoRe.disabled = true;
     } else {
         audioErro.play();
+        pontos--
     }
+
+    pontuacaoElement.textContent = "Pontuação: " + pontos;
 });
 
 // Função para mover a nota MI
@@ -120,12 +144,18 @@ function moverAnotaMi() {
 }
 
 botaoMi.addEventListener("click", function () {
-    if (nota === 3) {
+    if (nota === 3 && !botaoMi.disabled){
         var audioMi = document.getElementById("audio2");
         audioMi.play();
+        pontos++
+
+        botaoMi.disabled = true;
     } else {
         audioErro.play();
+        pontos--
     }
+    
+    pontuacaoElement.textContent = "Pontuação: " + pontos;
 });
 
 // Função para mover a nota FA
@@ -141,12 +171,18 @@ function moverAnotaFa() {
 }
 
 botaoFa.addEventListener("click", function () {
-    if (nota === 4) {
+    if (nota === 4 && !botaoFa.disabled) {
         var audioFa = document.getElementById("audio3");
         audioFa.play();
+        pontos++
+
+        botaoFa.disabled = true;
     } else {
         audioErro.play();
+        pontos--
     }
+
+    pontuacaoElement.textContent = "Pontuação: " + pontos;
 });
 
 // Função para mover a nota SOL
@@ -162,12 +198,18 @@ function moverAnotaSol() {
 }
 
 botaoSol.addEventListener("click", function () {
-    if (nota === 5) {
+    if (nota === 5 && !botaoSol.disabled) {
         var audioSol = document.getElementById("audio4");
         audioSol.play();
+        pontos++
+
+        botaoSol.disabled = true;
     } else {
         audioErro.play();
+        pontos--
     }
+
+    pontuacaoElement.textContent = "Pontuação: " + pontos;
 });
 
 // Função para mover a nota LA
@@ -183,12 +225,18 @@ function moverAnotaLa() {
 }
 
 botaoLa.addEventListener("click", function () {
-    if (nota === 6) {
+    if (nota === 6 && !botaoLa.disabled) {
         var audioLa = document.getElementById("audio5");
         audioLa.play();
+        pontos++
+
+        botaoLa.disabled = true;
     } else {
         audioErro.play();
+        pontos--
     }
+
+    pontuacaoElement.textContent = "Pontuação: " + pontos;
 });
 
 // Função para mover a nota SI
@@ -204,12 +252,18 @@ function moverAnotaSi() {
 }
 
 botaoSi.addEventListener("click", function () {
-    if (nota === 7) {
+    if (nota === 7 && !botaoSi.disabled) {
         var audioSi = document.getElementById("audio6");
         audioSi.play();
+        pontos++
+
+        botaoSi.disabled = true;
     } else {
         audioErro.play();
+        pontos--
     }
+
+    pontuacaoElement.textContent = "Pontuação: " + pontos;
 });
 
 // Função para mover a nota DOO
@@ -225,12 +279,18 @@ function moverAnotaDoo() {
 }
 
 botaoDoo.addEventListener("click", function () {
-    if (nota === 8) {
+    if (nota === 8 && !botaoDoo.disabled) {
         var audioDoo = document.getElementById("audio7");
         audioDoo.play();
+        pontos++
+
+        botaoDoo.disabled = true;
     } else {
         audioErro.play();
+        pontos--
     }
+
+    pontuacaoElement.textContent = "Pontuação: " + pontos;
 });
 
 gerarNumeroAleatorio();
