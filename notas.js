@@ -18,9 +18,7 @@ var jogoEmAndamento = false;
 
 // Função para gerar um número aleatório de 1 a 8
 function gerarNumeroAleatorio() {
-    if (jogoEmAndamento){
         return Math.floor(Math.random() * 8) + 1;
-    }
 }
 
 var notas = document.querySelectorAll(".nota");
@@ -108,7 +106,7 @@ botaoDo.addEventListener("click", function () {
         }
     }
 
-    pontuacaoElement.textContent = "Pontuação: " + pontos;
+    pontuacaoElement.textContent = "Pontos: " + pontos;
 });
 
 // Função para mover a nota RE
@@ -137,7 +135,7 @@ botaoRe.addEventListener("click", function () {
         }
     }
 
-    pontuacaoElement.textContent = "Pontuação: " + pontos;
+    pontuacaoElement.textContent = "Pontos: " + pontos;
 });
 
 // Função para mover a nota MI
@@ -166,7 +164,7 @@ botaoMi.addEventListener("click", function () {
         }
     }
     
-    pontuacaoElement.textContent = "Pontuação: " + pontos;
+    pontuacaoElement.textContent = "Pontos: " + pontos;
 });
 
 // Função para mover a nota FA
@@ -195,7 +193,7 @@ botaoFa.addEventListener("click", function () {
         }
     }
 
-    pontuacaoElement.textContent = "Pontuação: " + pontos;
+    pontuacaoElement.textContent = "Pontos: " + pontos;
 });
 
 // Função para mover a nota SOL
@@ -224,7 +222,7 @@ botaoSol.addEventListener("click", function () {
         }
     }
 
-    pontuacaoElement.textContent = "Pontuação: " + pontos;
+    pontuacaoElement.textContent = "Pontos: " + pontos;
 });
 
 // Função para mover a nota LA
@@ -253,7 +251,7 @@ botaoLa.addEventListener("click", function () {
         }
     }
 
-    pontuacaoElement.textContent = "Pontuação: " + pontos;
+    pontuacaoElement.textContent = "Pontos: " + pontos;
 });
 
 // Função para mover a nota SI
@@ -282,7 +280,7 @@ botaoSi.addEventListener("click", function () {
         }
     }
 
-    pontuacaoElement.textContent = "Pontuação: " + pontos;
+    pontuacaoElement.textContent = "Pontos: " + pontos;
 });
 
 // Função para mover a nota DOO
@@ -311,16 +309,14 @@ botaoDoo.addEventListener("click", function () {
         }
     }
 
-    pontuacaoElement.textContent = "Pontuação: " + pontos;
+    pontuacaoElement.textContent = "Pontos: " + pontos;
 });
 
 
 // Função para tocar uma nota a cada 8 segundos
 function tocarNotaAleatoriaAIntervalos() {
-    if (jogoEmAndamento){
-        gerarNumeroAleatorio();
-        tocarProximaNota(); // Tocar a primeira nota imediatamente
-    }
+    gerarNumeroAleatorio();
+    tocarProximaNota(); // Tocar a primeira nota imediatamente
 }
 
 botaoPlay.addEventListener("click", function (){
@@ -328,19 +324,4 @@ botaoPlay.addEventListener("click", function (){
     tocarNotaAleatoriaAIntervalos();
     botaoPlay.style.display = "none";
     botaoStop.style.display = "block";
-});
-
-botaoStop.addEventListener("click", function (){
-    jogoEmAndamento = false;
-    botaoStop.style.display = "none";
-    botaoPlay.style.display = "block";
-
-    notaDo.style.display = "none";
-    notaRe.style.display = "none";
-    notaMi.style.display = "none";
-    notaFa.style.display = "none";
-    notaSol.style.display = "none";
-    notaLa.style.display = "none";
-    notaSi.style.display = "none";
-    notaDoo.style.display = "none";
 });
