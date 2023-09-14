@@ -8,6 +8,29 @@
     background-color: aliceblue;
 }
 
+#play{
+    position: absolute;
+    left: 30%;
+    top: 0;
+    z-index: 8;
+    border-radius: 20%;
+    font-size: 30px;
+    font-weight: 400;
+    background-color: greenyellow;
+}
+
+#parar{
+    position: absolute;
+    left: 30%;
+    top: 0;
+    z-index: 8;
+    border-radius: 20%;
+    font-size: 30px;
+    font-weight: 400;
+    background-color: rgb(253, 47, 47);
+    display: none;
+}
+
 #notaDo {
     width: 30px;
     height: 30px;

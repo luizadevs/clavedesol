@@ -8,14 +8,19 @@ var botaoSi = document.getElementById("nota6");
 var botaoDoo = document.getElementById("nota7");
 var audioErro = document.getElementById("audioErro");
 var pontuacaoElement = document.getElementById("pontuacao");
+var botaoPlay = document.getElementById("play");
+var botaoStop = document.getElementById("parar");
 
 // Variável para armazenar a nota atual
 var nota = 0;
 var pontos = 0;
+var jogoEmAndamento = false;
 
 // Função para gerar um número aleatório de 1 a 8
 function gerarNumeroAleatorio() {
-    return Math.floor(Math.random() * 8) + 1;
+    if (jogoEmAndamento){
+        return Math.floor(Math.random() * 8) + 1;
+    }
 }
 
 var notas = document.querySelectorAll(".nota");
@@ -309,15 +314,33 @@ botaoDoo.addEventListener("click", function () {
     pontuacaoElement.textContent = "Pontuação: " + pontos;
 });
 
-gerarNumeroAleatorio();
 
 // Função para tocar uma nota a cada 8 segundos
 function tocarNotaAleatoriaAIntervalos() {
-    tocarProximaNota(); // Tocar a primeira nota imediatamente
+    if (jogoEmAndamento){
+        gerarNumeroAleatorio();
+        tocarProximaNota(); // Tocar a primeira nota imediatamente
+    }
 }
 
-// Chame a função para começar a tocar notas aleatórias a intervalos de 8 segundos
-tocarNotaAleatoriaAIntervalos();
+botaoPlay.addEventListener("click", function (){
+    jogoEmAndamento = true;
+    tocarNotaAleatoriaAIntervalos();
+    botaoPlay.style.display = "none";
+    botaoStop.style.display = "block";
+});
 
+botaoStop.addEventListener("click", function (){
+    jogoEmAndamento = false;
+    botaoStop.style.display = "none";
+    botaoPlay.style.display = "block";
 
-
+    notaDo.style.display = "none";
+    notaRe.style.display = "none";
+    notaMi.style.display = "none";
+    notaFa.style.display = "none";
+    notaSol.style.display = "none";
+    notaLa.style.display = "none";
+    notaSi.style.display = "none";
+    notaDoo.style.display = "none";
+});
